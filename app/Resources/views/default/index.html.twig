@@ -3,45 +3,17 @@
 {% block body %}
     <div id="content" class="app-content" role="main">
         <div class="app-content-body ">
-            <div class="hbox hbox-auto-xs hbox-auto-sm">
-                <div class="bg-light lter b-b wrapper-md">
-                <div class="row">
-                    <div class="col-sm-6 col-xs-12">
-                      <h1 class="m-n font-thin h3 text-black">Dashboard</h1>
-                      <small class="text-muted">Welcome to CDC application</small>
-                    </div>
-                </div>
-                <div class="row">
-                    <div id="welcome">
-                        <h1><span>Welcome to</span> Symfony {{ constant('Symfony\\Component\\HttpKernel\\Kernel::VERSION') }}</h1>
-                    </div>
-
-                    <div id="status">
-                        <p>
-
-                            Your application is ready to start working on it at:
-                            <code>{{ base_dir }}/</code>
-                        </p>
-                    </div>
-
-                    <div id="next">
-                        <h2>What's next?</h2>
-                        <p>
-
-                            Read Symfony documentation to learn
-                            <a href="http://symfony.com/doc/{{ constant('Symfony\\Component\\HttpKernel\\Kernel::VERSION')[:3] }}/book/page_creation.html">
-                                How to create your first page in Symfony.
-                            </a>
-                        </p>
-                    </div>
-                </div>
+            <div class="bg-light lter b-b wrapper-md">
+                <h1 class="m-n font-thin h3">Dashboard</h1>
             </div>
-        </div>
-    </div>
-    <div id="wrapper">
-        <div id="container">
-            
-
+            <div class="wrapper-md">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
         </div>
     </div>
 {% endblock %}
@@ -50,4 +22,9 @@
 <style>
     
 </style>
+{% endblock %}
+{% block javascripts %}
+    <script type="text/javascript">
+    $(".nav li:nth-child(2)").addClass("active");
+    </script>
 {% endblock %}

@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="content" class="app-content" role="main">
+        <div class="app-content-body ">
+            <div class="bg-light lter b-b wrapper-md">
+                <h1 class="m-n font-thin h3">Datatable</h1>
+            </div>
+            <div class="wrapper-md">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        DataTables
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-striped m-b-none">
+                            <thead>
+                              <tr>
+                                <th style="width:25%">Nom</th>
+                                <th style="width:5%">Sexe</th>
+                                <th style="width:15%">Pays</th>
+                                <th style="width:25%">Email</th>
+                                <th style="width:15%">Téléphone</th>
+                                <th style="width:15%">Inscrit le</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/dataTables.bootstrap.min.css') }}">
+<style>
+    
+</style>
+{% endblock %}
+{% block javascripts %}
+    <script type="text/javascript">
+    $(".nav li:nth-child(3)").addClass("active");
+
+    $(document).ready( function () {
+        $('.table').DataTable({
+            sAjaxSource: "{{ asset('data/datatable.json') }}",
+            aoColumns: [
+            { mData: 'name' },
+            { mData: 'gender' },
+            { mData: 'country' },
+            { mData: 'email' },
+            { mData: 'phone' },
+            { mData: 'registred' }
+          ],
+          "language": {
+                "url": "//cdn.datatables.net/plug-ins/1.10.9/i18n/French.json"
+            }
+        });
+    } );
+    </script>
+    <script src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('js/dataTables.bootstrap.min.js') }}"></script>
+{% endblock %}
