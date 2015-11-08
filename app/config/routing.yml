@@ -5,3 +5,7 @@ app:
 list:
     path: "/list"
     defaults:  { _controller: AppBundle:List:index }
+
+settings:
+    path: "/settings"
+    defaults:  { _controller: AppBundle:Settings:index }
