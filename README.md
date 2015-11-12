@@ -1,2 +1,2 @@
 # cdc
-## Projet developpé par la comité *geekteam* de **ESN France** en partenariant avec *La Carte des colocs*
+Projet developpÃ© par la comitÃ© *geekteam* de **ESN France** en partenariant avec *La Carte des colocs*
